@@ -58,3 +58,10 @@ gcd_1 = list(i for i in range(1,x+1) if x%i ==0)
 gcd_2 = list(i for i in range(1,y+1) if y%i ==0)
 gcd_all = max(list(i for i in gcd_1 if i in gcd_2))
 print(gcd_all)
+
+from functools import reduce
+
+def p4():
+  list_x = [1.5,2,0.5,4,5]
+  return (reduce(lambda x1, x2: (x2-x1)/(x2+x1), list_x))
+print(p4())
