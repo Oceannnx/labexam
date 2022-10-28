@@ -35,10 +35,26 @@ list_letter = letter.split()
 decoded_list =  list(ddict.get(i) if i in ddict.keys() else i for i in list_letter)
 decoded_letter = ' '.join(decoded_list)
 print(decoded_letter)
-# Expected ans-> decoded_letter = 'Dear Doctor I am now in great life threatening danger, please I need your help My heart beats like a machine  very alarmingly every hour, I need your help This is something I have never felt before and it is the drug that causes it'
+Expected ans-> decoded_letter = 'Dear Doctor I am now in great life threatening danger, please I need your help My heart beats like a machine  very alarmingly every hour, I need your help This is something I have never felt before and it is the drug that causes it'
+
 icecream_msg = 'I like to buy ice cream: choco or may be cone otherwise sherbet'
 icecream_price = {'cone':'300', 'sherbet':'200', 'choco': '100'}
 #ExpectedAns = 'I like to buy ice cream: choco for 100 or may be cone for 300 otherwise sherbet for 200'
 decoded_icecream_list = (list(i +" "+ "for" + " " +icecream_price.get(i) if i in icecream_price else i for i in icecream_msg.split()))
 Ans = ' '.join(decoded_icecream_list)
 print(Ans)
+
+x = 16
+y = 8
+gcd_1 = list(i for i in range(1,x+1) if x%i ==0)
+gcd_2 = list(i for i in range(1,y+1) if x%i ==0)
+gcd_all = list((max(zip(gcd_1,gcd_2))))
+real_gdc = gcd_all[0]
+print(gcd_1)
+print(gcd_2)
+print(real_gdc)
+
+gcd_1 = list(i for i in range(1,x+1) if x%i ==0)
+gcd_2 = list(i for i in range(1,y+1) if y%i ==0)
+gcd_all = max(list(i for i in gcd_1 if i in gcd_2))
+print(gcd_all)
